@@ -8,19 +8,15 @@
 	</head>
 	
 	<body>
-		<h2>HTMLで表示する例</h2>
 		<div id="app">
-			<p>{{ myText }}</p>
-			<p v-text="myText"></p>
-			<!--v-htmlでデータをhtmlで表示する-->
-			<p v-html="myText"></p>
+			<p>{{myText}}</p>
 		</div>
 
 		<script>
 			new Vue({
-				el: '#app',
-				data: {
-					myText:'<h1>Hello!!!</h1>'
+				el:'#app',
+				data:{
+					myText:'Hello!!!'
 				}
 			})
 		</script>
