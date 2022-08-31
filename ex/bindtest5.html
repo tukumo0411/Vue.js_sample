@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>		
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+        <h2>クラスを指定する例</h2>
+        <style>
+            .strike-throygh {
+                text-decoration: line-through;
+                color: lightgrey;
+            }
+            .dark {
+                background-color: gray;
+            }
+        </style>
+		<div id="app">
+		<p class="strike-throygh">直接クラスで指定</p>
+        <p v-bind:class="myClass, darkClass">v-bindで複数のクラスを指定</p>
+        <p class="strike-throygh": isON>データでクラスをONOFF</p>
+		</div>
+
+		<script>
+            new Vue({
+                data: {
+                    myClass: 'strike-through',
+					darkClass: 'dark',
+					isON: true
+                }
+            })
+		</script>
+	</body>
+</html>
