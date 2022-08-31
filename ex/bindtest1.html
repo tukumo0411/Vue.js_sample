@@ -8,18 +8,17 @@
 	</head>
 	
 	<body>
-		<h2>リンクを指定する例</h2>
+		<h2>画像を指定する例</h2>
 		<div id="app">
-			<a href="https://www.ymori.com">リンクを直接指定</a><p>
-				<!--v-bindでリンクを指定する-->
-			<a v-bind:href="myURL">リンクをv-bindで指定</a>
+			<img src="face1.png">直接指定</img><p>
+			<img v-bind:src="fileName">v-bindで指定</img>
 		</div>
 
 		<script>
 			new Vue({
 				el: '#app',
 				data: {
-					myURL:'https://www.ymori.com'
+					fileName:'face1.png'
 				}
 			})
 		</script>
