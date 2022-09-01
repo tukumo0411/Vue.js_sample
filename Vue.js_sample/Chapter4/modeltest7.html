@@ -10,11 +10,13 @@
 	<body>
 		<h2>画像の表示をラジオボタンで切り換える例</h2>
 		<div id="app">
+			<!-- v-modelで画像の表示をラジオボタンで切り替える例 -->
 			<label><input type="radio" value="face1.png" v-model="fileName">
 				face1</label><br>
 			<label><input type="radio" value="face2.png" v-model="fileName">
 				face2</label><br>
 			<p>{{ fileName }} を選択<p>
+				<!-- v-bindで属性指定 -->
 			<img v-bind:src="fileName"></img>
 		</div>
 
