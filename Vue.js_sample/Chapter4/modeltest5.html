@@ -10,8 +10,10 @@
 	<body>
 		<h2>同意にチェックを入れたら送信ボタンが有効になる例</h2>
 		<div id="app">
+			<!-- v-modelで同意にチェックボックスを入れたら送信ボタンが有効になる例 -->
 			<label><input type="checkbox" v-model="myAgree" >
 			同意します。</label>
+			<!-- v-modelで属性のdisabledを制御する -->
 			<button v-bind:disabled="myAgree==false">送信</button>
 		</div>
 
