@@ -10,6 +10,7 @@
 	<body>
 		<h2>文字列が選択した色に変わる例</h2>
 		<div id="app">
+			<!-- 文字列が選択した色に変わる例 -->
 			<select v-model="myColor">
 				<option disabled value="">色を選んでください</option>
 				<option>red</option>
@@ -18,6 +19,7 @@
 				<option>orange</option>
 				<option>brown</option>
 			</select>
+			<!-- v-bindで属性を指定 -->
 			<p v-bind:style="{color: myColor}">選んだのは、{{ myColor }}です </p>
 		</div>
 
