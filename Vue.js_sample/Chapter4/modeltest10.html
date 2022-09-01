@@ -10,6 +10,8 @@
 	<body>
 		<h2>全部書き終わったら入力する例</h2>
 		<div id="app">
+			<!-- v-modelで全部書き終わってから入力する例 -->
+			<!-- Enterを押したら表示される -->
 			<input v-model.lazy="myText">
 			<p>入力後に表示「{{ myText }}」</p>
 		</div>
