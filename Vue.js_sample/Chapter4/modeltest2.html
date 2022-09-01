@@ -10,6 +10,7 @@
 	<body>
 		<h2>入力した文章と、文字数を表示する例</h2>
 		<div id="app">
+			<!-- v-modelで入力した文章と、文字数を表示する例 -->
 			<textarea  v-model="myText"></textarea>
 			<p>文章は、「{{ myText }}」</p>
 			<p>文字数は、{{ myText.length }} 文字です。</p>
