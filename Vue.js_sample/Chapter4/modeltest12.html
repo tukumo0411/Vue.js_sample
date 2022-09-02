@@ -10,6 +10,7 @@
 	<body>
 		<h2>前後の空白を自動的に削除（トリム）する例</h2>
 		<div id="app">
+			<!-- v-modelで前後の空白を自動的に削除（トリム）をする例 修飾子にtrimを指定する -->
 			<input v-model.trim="myText">
 			<p>前後の空白を削除「{{ myText }}」</p>
 		</div>
