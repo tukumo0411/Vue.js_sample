@@ -10,14 +10,19 @@
 	<body>
 		<h2>クリックしたら、2回目は押せなくなるいいねボタンの例</h2>
 		<div id="app">
+			<!-- クリックしたら、2回目は押せなくなるいいねボタンの例 -->
+			<!-- v-bindで属性をつなぐ -->
+			<!-- v-onでイベントをつなぐ -->
 			<button value="いいね" v-bind:disabled="isClick"
 				v-on:click="oneClick">いいね</button>
 		</div>
 
 		<script>
+			// Jsのalert
 			function iine() {
 				alert("いいね");
 			}
+			// Vueインスタンス
 			new Vue({
 				el: '#app',
 				data: {
