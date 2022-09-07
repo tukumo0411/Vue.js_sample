@@ -11,6 +11,7 @@
 		<h2>偶数だけ表示する例</h2>
 		<div id="app">
 			<ul>
+				<!-- v-forとv-ifの組み合わせで偶数だけを表示する -->
 				<li v-for="item in myArray" v-if="item % 2 == 0"> {{ item }}</li>
 			</ul>
 		</div>
