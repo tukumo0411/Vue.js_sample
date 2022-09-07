@@ -10,7 +10,10 @@
 	<body>
 		<h2>trueのときだけ表示する例</h2>
 		<div id="app">
+			<!-- v-modelで入力をつなぐ -->
 			<label><input type="checkbox" v-model="myVisible">表示する</label>
+			<!-- 条件で表示するときはv-if -->
+			<!-- <タグ名を v-if="条件"> 条件がtrueなら表示 </タグ名> -->
 			<p v-if="myVisible">チェックボックスはON</p>
 		</div>
 
