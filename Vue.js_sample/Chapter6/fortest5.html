@@ -13,6 +13,7 @@
 			<ul>
 				<li v-for="item in myArray"> {{ item }}</li>
 			</ul>
+			<!-- v-onでイベントとメソッドをつなぐ -->
 			<button v-on:click="addLast">末尾に追加</button><br>
 			<button v-on:click="addObj(3)">4つ目に追加</button><br>
 			<button v-on:click="changeObj(0)">1つ目を変更</button><br>
@@ -27,15 +28,19 @@
 				},
 				methods: {
 					addLast: function(){
+						// 配列の末尾へ要素の追加は 配列名.push(追加する要素)
 						this.myArray.push("［末尾に追加］");
 					},
 					addObj: function(index) {
+						// 配列名.splice(開始番号, 削除する要素数, 追加する要素)
 						this.myArray.splice(index, 0, '［追加］')
 					},
 					changeObj: function(index) {
+						// 配列名.splice(開始番号, 削除する要素数, 追加する要素)
 						this.myArray.splice(index, 1, '［変更］')
 					},
 					deleteObj: function(index) {
+						// 配列名.splice(開始番号, 削除する要素数)
 						this.myArray.splice(index, 1);
 					}
 				}
