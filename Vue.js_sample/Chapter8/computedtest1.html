@@ -10,7 +10,10 @@
 	<body>
 		<h2>金額を入力したら、税込み金額を計算する例</h2>
 		<div id="app">
+			<!-- computedで金額を入力したら、税込み金額を自動計算する例 -->
+			<!-- v-modelで入力値とつなぐ -->
 			<input v-model.number="price" type="number">円
+			<!-- 表示するのはdataではなく、computedで計算されたtaxIncluded -->
 			<p>消費税込みの金額 {{ taxIncluded }}円</p>
 		</div>
 
@@ -22,6 +25,7 @@
 				},
 				computed: {
 					// priceが変わったら、消費税込み金額を算出する
+					// computedで計算された戻り値がtaxIncludedに代入される
 					taxIncluded: function() {
 						return this.price * 1.08;
 					}
