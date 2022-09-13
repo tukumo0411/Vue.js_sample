@@ -9,6 +9,7 @@
 	
 	<body>
 		<h2>文字を入力すると、その文字を含む項目だけ表示される例</h2>
+		<!-- computedで文字を入力すると、その文字を含む項目だけ表示される例 -->
 		<div id="app">
 			<input v-model="findWord">
 			<ul>
@@ -27,9 +28,11 @@
 					// this.findWordが変わったら、その文字が含まれるリストを算出する
 					findItems: function() {
 						if (this.findWord) {
+							// 配列名.filter( コールバック関数(要素の値, 要素のインデックス) )
 							return this.items.filter(function(value) {
-								return (value.indexOf(this.findWord) > -1);
-							}, this);
+							// 文字列.indexOf(検索文字列 [, 開始インデックス])
+							return (value.indexOf(this.findWord) > -1);
+							}, this);  //コールバック内でthisを使用するために第2引数でthisを渡す
 						} else {
 							// this.findWordが空のときは、リストをそのまま返す
 							return this.items;
