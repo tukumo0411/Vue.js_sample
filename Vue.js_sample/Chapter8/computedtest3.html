@@ -11,7 +11,10 @@
 		<h2>文章を入力したら、残りの文字数を表示する例</h2>
 		<div id="app">
 			<p>ご感想は、140文字以内でご入力ください。</p>
+			<!--computedで文章を入力したら、残りの文字数を表示する例 -->
+			<!-- v-modelで入力値をつなぐ -->
 			<textarea  v-model="myText"></textarea>
+			<!-- v-bindで属性をつなぐ -->
 			<p v-bind:style="{color: computedColor}">残り {{ remaining }} 文字です。</p>
 		</div>
 
