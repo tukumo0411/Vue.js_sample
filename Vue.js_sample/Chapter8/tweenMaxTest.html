@@ -9,10 +9,14 @@
 	<body>
 		<h2>TweenMaxのテスト</h2>
 		<button id="movebtn" type="button" onclick="myMove()">移動</button>
+		<!-- CDNの読み込み -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 		<script>
+			// TweenMaxのテスト
 			function myMove() {
 				// movebtnのxプロパティを1秒で500に増やす
+				/* to:オブジェクトの操作方法 ＃movebtn:アニメーションさせたいオブジェクト
+				1:アニメーションの継続時間 x:"500xp":アニメーションさせたいCSSプロパティ*/
 				TweenMax.to('#movebtn', 1, {x: "500px"} );
 			}
 		</script>
