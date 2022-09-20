@@ -10,6 +10,7 @@
 	<body>
 		<h2>ボタンを押してリストが増減するとき、アニメーションする例</h2>
 		<div id="app">
+			<!-- リストのときはtransition-groupで囲む 識別子としてv-bind:key="違う値"も必要 -->
 			<transition-group>
 				<li v-for="item in dataArray" v-bind:key="item"> {{item}}</li>
 			</transition-group>
@@ -19,6 +20,7 @@
 		</div>
 		
 		<script>
+			// transitionでボタンを押してリストが増減するとき、アニメーションする例
 			new Vue({
 				el: '#app',
 				data: {
@@ -33,6 +35,7 @@
 					removeLast: function() {
 						var lastIdx = this.dataArray.length - 1;
 						this.dataArray.splice(lastIdx, 1);
+						// 最後の要素であればthis.dataArray.pop()でもOK
 					}
 				}
 			})
