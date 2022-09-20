@@ -17,6 +17,7 @@
 		</div>
 
 		<script>
+			// transitionでチェックボックスで表示、非表示をアニメーションする例
 			new Vue({
 				el: '#app',
 				data: {
@@ -35,6 +36,18 @@
 				opacity: 0;
 				transform: translateY(20px)
 			}
+			/*
+            要素が現れるとき
+            ・ .v-enter:現れる前の状態
+            ・ .v-enter-active:現れている最中
+            ・ .v-enter-to:現れたときの状態
+             要素が消えるとき
+            ・ .v-leave:消える前の状態
+            ・ .v-leave-active:消えている最中
+            ・ .v-leave-to:消えた時の状態
+            要素が移動するとき
+           ・ .v-move:要素が移動するとき
+            */
 		</style>
 	</body>
 </html>
